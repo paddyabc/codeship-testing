@@ -11,6 +11,7 @@ describe('<Unit Test> StockController', function(){
 		
 
 		it('normal case', function(done) {
+			this.timeout(0);
 
 			StockRepository.prototype.findAll = function(callback){
 
