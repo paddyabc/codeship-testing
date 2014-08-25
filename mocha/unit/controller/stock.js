@@ -25,7 +25,7 @@ describe('<Unit Test> StockController', function(){
 				if(callback)
 					callback(output);
 
-				var promise = Parse.Promise();
+				var promise = new Parse.Promise();
 
 				setTimeout(function(){
 					promise.resolve(output);
@@ -44,7 +44,7 @@ describe('<Unit Test> StockController', function(){
 				if(callback)
 					callback(null, output)
 
-				var promise = Parse.Promise();
+				var promise = new Parse.Promise();
 
 				setTimeout(function(){
 					promise.resolve(output);
@@ -55,7 +55,7 @@ describe('<Unit Test> StockController', function(){
 
 			CacheStockInfoRepository.prototype.save = function(stock){
 
-				var promise = Parse.Promise();
+				var promise = new Parse.Promise();
 
 				setTimeout(function(){
 					promise.resolve(stock);
