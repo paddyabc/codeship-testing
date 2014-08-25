@@ -17,6 +17,7 @@
 	    "grunt-concurrent": "latest",
 	    "grunt-mocha-test": "latest",
 	    "grunt-shell": "latest",
+	    "grunt-contrib-jshint": "latest",
 	    "istanbul": "latest",
 	    "mocha": "~1.20.0",
 	    "should": "latest",
