@@ -1,6 +1,6 @@
 var should = require('should');
 var Parse = require('cloud/custom/parse');
-var StockController = require('cloud/controller/StockController');
+
 
 describe('<Unit Test> StockController', function(){
 
@@ -50,9 +50,9 @@ describe('<Unit Test> StockController', function(){
 
 			};
 
+			var StockController = require('cloud/controller/StockController');
 
-			var controller = new StockController();
-			controller.updateStockInfo().then(function(objcet){
+			StockController.updateStockInfo().then(function(objcet){
 				should.exists(object);
 				object.shoudl.have.property("open").and.a.Number;
 				object.should.have.property("high").and.a.Number;
