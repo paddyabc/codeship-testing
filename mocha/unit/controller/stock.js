@@ -67,7 +67,13 @@ describe('<Unit Test> StockController', function(){
 				object.should.have.property("price").and.a.Number;
 
 				done();
+			}, function(error){
+				should.not.exists(error);
+				done();
 			});
+			/*StockController.getStockList().then(function(object){
+
+			});*/
 		});
 	});
 
