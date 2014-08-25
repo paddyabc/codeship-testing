@@ -34,7 +34,7 @@ Encoder = {
 
 	isEmpty : function(val){
 		if(val){
-			return ((val===null) || val.length==0 || /^\s+$/.test(val));
+			return ((val===null) || val.length===0 || /^\s+$/.test(val));
 		}else{
 			return true;
 		}
@@ -90,7 +90,7 @@ Encoder = {
 		arr=d.match(/&#[0-9]{1,5};/g);
 		
 		// if no matches found in string then skip
-		if(arr!=null){
+		if(arr!==null){
 			for(var x=0;x<arr.length;x++){
 				m = arr[x];
 				c = m.substring(2,m.length-1); //get numeric part which is refernce to unicode character
@@ -240,6 +240,6 @@ Encoder = {
 		return -1;
 	}
 
-}
+};
 
 module.exports = Encoder;

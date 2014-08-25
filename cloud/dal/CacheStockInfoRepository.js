@@ -1,11 +1,11 @@
 var _ = require("underscore");
 var Parse = require("cloud/custom/parse");
-var AbstractRepository = require("cloud/dal/AbstractRepository")
+var AbstractRepository = require("cloud/dal/AbstractRepository");
 
 var CacheStockInfoRepository = function (){
 
 	AbstractRepository.apply(this, ["CacheStockInfo"]);
-}
+};
 
 _.extend(CacheStockInfoRepository.prototype, AbstractRepository.prototype,{
 
@@ -16,7 +16,7 @@ _.extend(CacheStockInfoRepository.prototype, AbstractRepository.prototype,{
 		    success:function(results){
 
 		    	if(callback){
-			    	if(results != null && results.length > 0){			    		
+			    	if(results !== null && results.length > 0){			    		
 			    		callback(null, results[0]);
 			    	}
 		    	} else {

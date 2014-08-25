@@ -57,4 +57,4 @@ module.exports = function(grunt) {
     // Coverage task
     grunt.registerTask('cov', [ 'jshint', 'env:test', 'shell:coverage' ]);
 
-}
+};

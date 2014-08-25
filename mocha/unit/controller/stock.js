@@ -64,8 +64,8 @@ describe('<Unit Test> StockController', function(){
 
 				done();
 			});
-		}
-	})
+		});
+	});
 
 
-})
+});

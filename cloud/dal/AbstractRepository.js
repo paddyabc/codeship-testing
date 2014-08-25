@@ -4,7 +4,7 @@ var AbstractRepository = function (name){
 	this.entityName = name;
 
 	this.initialize.call(this);
-}
+};
 
 _.extend(AbstractRepository.prototype, {
 

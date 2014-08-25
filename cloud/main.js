@@ -12,7 +12,7 @@ Parse.Cloud.job("getStockInfo", function(request, status){
         function(error){
             status.error(error);
         }
-    )
+    );
 });
 
 

@@ -1,11 +1,11 @@
 var _ = require("underscore");
 var Parse = require("cloud/custom/parse");
-var AbstractRepository = require("cloud/dal/AbstractRepository")
+var AbstractRepository = require("cloud/dal/AbstractRepository");
 
 var StockRepository = function (){
 
 	AbstractRepository.apply(this, ["Stock"]);
-}
+};
 
 _.extend(StockRepository.prototype, AbstractRepository.prototype, {
 
@@ -15,7 +15,7 @@ _.extend(StockRepository.prototype, AbstractRepository.prototype, {
 		return cacheQuery.find({
 		    success:function(results){
 		    	if(callback){
-			    	if(resutls != null && results.length > 0)
+			    	if(resutls !== null && results.length > 0)
 			    		callback(null, results[0]);
 			    	else
 			    		callback(null, null);
