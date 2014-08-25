@@ -28,7 +28,9 @@ describe('<Unit Test> StockController', function(){
 				var promise = new Parse.Promise();
 
 				setTimeout(function(){
+					console.log("Resolve findAll promise start");
 					promise.resolve(output);
+					console.log("Resolve findAll promise end");
 				},500);
 				
 				return promise;
@@ -47,7 +49,9 @@ describe('<Unit Test> StockController', function(){
 				var promise = new Parse.Promise();
 
 				setTimeout(function(){
+					console.log("Resolve findStock promise start");
 					promise.resolve(output);
+					console.log("Resolve findStock promise end");
 				},500);
 
 				return promise;
@@ -58,7 +62,9 @@ describe('<Unit Test> StockController', function(){
 				var promise = new Parse.Promise();
 
 				setTimeout(function(){
+					console.log("Resolve save promise start");
 					promise.resolve(stock);
+					console.log("Resolve save promise end");
 				},500);
 				
 				return promise;
