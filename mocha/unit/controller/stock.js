@@ -23,7 +23,7 @@ describe('<Unit Test> StockController', function(){
 				var output = [obj];
 
 				if(callback)
-					callback(output);
+					callback(null,output);
 
 				var promise = new Parse.Promise();
 
@@ -36,15 +36,15 @@ describe('<Unit Test> StockController', function(){
 				return promise;
 			};
 			CacheStockInfoRepository.prototype.findByStock = function (stock,callback){
-				var obj = new Parse.Object("Stock");
+				/*var obj = new Parse.Object("Stock");
 				obj.set('code', '0005.hk');
 				obj.set('name', 'HSBC');
 				obj.set('id', 'abcdef');
 
-				var output = [obj];
+				var output = [obj];*/
 
 				if(callback)
-					callback(null, output)
+					callback(null, null)
 
 				var promise = new Parse.Promise();
 
@@ -85,7 +85,6 @@ describe('<Unit Test> StockController', function(){
 
 				done();
 			}, function(error){
-				console.log(error);
 				should.not.exists(error);
 				done();
 			}); 
