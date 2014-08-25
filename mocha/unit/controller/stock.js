@@ -22,8 +22,8 @@ describe('<Unit Test> StockController', function(){
 				var output = [obj];
 
 				return output;
-			}
-			CacheStockInfoRepository.prototype.findByStock(stock,callback){
+			};
+			CacheStockInfoRepository.prototype.findByStock = function (stock,callback){
 				var obj = new Parse.Object("Stock");
 				obj.set('code', '0005.hk');
 				obj.set('name', 'HSBC');
@@ -39,16 +39,16 @@ describe('<Unit Test> StockController', function(){
 				promise.resolve(output)
 
 				return promise;
-			}
+			};
 
-			CacheStockInfoRepository.prototype.save(stock){
+			CacheStockInfoRepository.prototype.save = function(stock){
 
 				var promise = Parse.Promise();
 
 				promise.resolve(stock);
 				return promise;
 
-			}
+			};
 
 
 			var controller = new StockController();
