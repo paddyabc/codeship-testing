@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "_default": {
+            "link": "paddyTest"
+        }, 
+        "paddyTest": {
+            "applicationId": "QRC3CKXqSuvvNl1WzhGUttyblxLdWLHNJJ3ExxgS", 
+            "masterKey": "s8S9vfvGcQoty1e1HB56ZiMUUZaLx77GcA3lPVXR"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.2.16"
+    }
+}
