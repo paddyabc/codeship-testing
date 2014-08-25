@@ -20,7 +20,7 @@ module.exports = function(grunt) {
                 reporter: 'spec',
                 bail: true
             },
-            unit: [ 'test/mocha/unit/**/*.js' ]
+            unit: [ 'mocha/unit/**/*.js' ]
         },
         env: {
             test: {
