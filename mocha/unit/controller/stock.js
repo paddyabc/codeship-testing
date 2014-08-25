@@ -22,7 +22,16 @@ describe('<Unit Test> StockController', function(){
 
 				var output = [obj];
 
-				return output;
+				if(callback)
+					callback(output);
+
+				var promise = Parse.Promise();
+
+				setTimeout(function(){
+					promise.resolve(output);
+				},500);
+				
+				return promise;
 			};
 			CacheStockInfoRepository.prototype.findByStock = function (stock,callback){
 				var obj = new Parse.Object("Stock");
@@ -37,7 +46,9 @@ describe('<Unit Test> StockController', function(){
 
 				var promise = Parse.Promise();
 
-				promise.resolve(output)
+				setTimeout(function(){
+					promise.resolve(output);
+				},500):
 
 				return promise;
 			};
