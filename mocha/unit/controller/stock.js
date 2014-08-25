@@ -85,6 +85,7 @@ describe('<Unit Test> StockController', function(){
 
 				done();
 			}, function(error){
+				console.log(error);
 				should.not.exists(error);
 				done();
 			}); 
