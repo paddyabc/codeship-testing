@@ -73,7 +73,8 @@ module.exports = {
 		stockRepo.findAll(function(error, result){
 			if(error)
 				promise.reject(error);
-			promise.resolve(result);
+			else
+				promise.resolve(result);
 		});
 
 		return promise;

@@ -28,9 +28,9 @@ describe('<Unit Test> StockController', function(){
 				var promise = new Parse.Promise();
 
 				setTimeout(function(){
-					console.log("Resolve findAll promise start");
+					// console.log("Resolve findAll promise start");
 					promise.resolve(output);
-					console.log("Resolve findAll promise end");
+					// console.log("Resolve findAll promise end");
 				},500);
 				
 				return promise;
@@ -49,9 +49,9 @@ describe('<Unit Test> StockController', function(){
 				var promise = new Parse.Promise();
 
 				setTimeout(function(){
-					console.log("Resolve findStock promise start");
+					// console.log("Resolve findStock promise start");
 					promise.resolve(output);
-					console.log("Resolve findStock promise end");
+					// console.log("Resolve findStock promise end");
 				},500);
 
 				return promise;
@@ -62,9 +62,9 @@ describe('<Unit Test> StockController', function(){
 				var promise = new Parse.Promise();
 
 				setTimeout(function(){
-					console.log("Resolve save promise start");
+					// console.log("Resolve save promise start");
 					promise.resolve(stock);
-					console.log("Resolve save promise end");
+					// console.log("Resolve save promise end");
 				},500);
 				
 				return promise;
@@ -72,7 +72,7 @@ describe('<Unit Test> StockController', function(){
 			};
 
 			var StockController = require('cloud/controller/StockController');
-			/*
+			
 			StockController.updateStockInfo().then(function(objcet){
 				should.exists(object);
 				object.shoudl.have.property("open").and.a.Number;
@@ -87,7 +87,8 @@ describe('<Unit Test> StockController', function(){
 			}, function(error){
 				should.not.exists(error);
 				done();
-			}); */
+			}); 
+			/*
 			StockController.getStockList().then(function(object){
 				should.exists(object);
 				done();
@@ -95,6 +96,7 @@ describe('<Unit Test> StockController', function(){
 				should.not.exists(error);
 				done();
 			});
+			*/
 		});
 	});
 
