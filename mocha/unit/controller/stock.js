@@ -46,7 +46,10 @@ describe('<Unit Test> StockController', function(){
 
 				var promise = Parse.Promise();
 
-				promise.resolve(stock);
+				setTimeout(function(){
+					promise.resolve(stock);
+				},500);
+				
 				return promise;
 
 			};
