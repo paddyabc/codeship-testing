@@ -72,7 +72,7 @@ describe('<Unit Test> StockController', function(){
 			};
 
 			var StockController = require('cloud/controller/StockController');
-			
+			/*
 			StockController.updateStockInfo().then(function(objcet){
 				should.exists(object);
 				object.shoudl.have.property("open").and.a.Number;
@@ -88,7 +88,8 @@ describe('<Unit Test> StockController', function(){
 				should.not.exists(error);
 				done();
 			}); 
-			/*
+			*/
+			
 			StockController.getStockList().then(function(object){
 				should.exists(object);
 				done();
@@ -96,7 +97,7 @@ describe('<Unit Test> StockController', function(){
 				should.not.exists(error);
 				done();
 			});
-			*/
+			
 		});
 	});
 
