@@ -1,5 +1,5 @@
 var should = require('should');
-var Parse = require('cloud/parse');
+var Parse = require('cloud/custom/parse');
 var StockController = require('cloud/controller/StockController');
 
 describe('<Unit Test> StockController', function(){
