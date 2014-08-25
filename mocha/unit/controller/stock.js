@@ -48,7 +48,7 @@ describe('<Unit Test> StockController', function(){
 
 				setTimeout(function(){
 					promise.resolve(output);
-				},500):
+				},500);
 
 				return promise;
 			};
