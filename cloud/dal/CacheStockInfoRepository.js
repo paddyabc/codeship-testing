@@ -19,9 +19,7 @@ _.extend(CacheStockInfoRepository.prototype, AbstractRepository.prototype,{
 			    	if(results !== null && results.length > 0){			    		
 			    		callback(null, results[0]);
 			    	}
-		    	} else {
-		    		callback(null, results);
-		    	}
+		    	} 
 
 		    }, 
 		    error: function(error){

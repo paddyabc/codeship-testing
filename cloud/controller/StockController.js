@@ -5,6 +5,7 @@ var StockRepository = require("cloud/dal/StockRepository");
 
 module.exports = {
 
+	/** background job **/
 	updateStockInfo: function(request, status){
 		var cacheStockRepo = new CacheStockInfoRepository();
 		var stockRepo = new StockRepository();
@@ -68,16 +69,78 @@ module.exports = {
 	},
 
 	getStockList : function(){
-		var stockRepo = new StockRepository();
+		var stockRepo = new CacheStockInfoRepository();
 		var promise = new Parse.Promise();
 		stockRepo.findAll(function(error, result){
+
+			//console.log(result[0].relation("stock").query().toJSON());
 			if(error)
 				promise.reject(error);
 			else
 				promise.resolve(result);
+
 		});
 
 		return promise;
+	},
+
+	/** phase1 function **/	
+	
+	comment: function(){
+
+	},
+
+	getComment : function(){
+
+	},
+
+	getNotice : function(){
+
+	},
+
+	follow : function(){
+
+	},
+
+	unfollow : function(){
+
+	},
+
+	subscribe : function(){
+
+	},
+
+	getFansCount : function(){
+
+	},
+
+	getFansList: function(){
+
+	},
+
+	getCommentRanking : function(){
+
+	},
+
+	getSubscribeRanking : function(){
+
+	},
+
+	search : function(){
+
+	},
+
+	/** phase 2 function  **/
+	getQuote : function(){
+
+	},
+
+	getRanking : function(){
+
+	},
+
+	getChartData : function(){
+
 	}
 
 };
